@@ -5,7 +5,7 @@ export const POST = async ({ cookies }) => {
     cookies.delete('session', {
         path: '/',
         httpOnly: true,
-        sameSite: 'strict',
+        sameSite: 'lax',
         secure: process.env.NODE_ENV === 'production'
     });
 
